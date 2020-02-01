@@ -9,6 +9,7 @@ module.exports = {
         },
       },
     ],
+    ['@shopify/react-i18n/babel'],
   ],
   env: {
     production: {

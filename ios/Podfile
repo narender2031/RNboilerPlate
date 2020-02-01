@@ -1,5 +1,6 @@
-platform :ios, '9.0'
+platform :ios, '10.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+require_relative '../node_modules/react-native-unimodules/cocoapods.rb'
 
 target 'RNboilerPlate' do
   # Pods for RNboilerPlate
@@ -40,6 +41,7 @@ target 'RNboilerPlate' do
   end
 
   use_native_modules!
+  use_unimodules!(exclude: ['expo-app-loader-provider', 'expo-file-system', 'unimodules-barcode-scanner-interface', 'unimodules-camera-interface', 'unimodules-face-detector-interface', 'unimodules-file-system-interface', 'unimodules-sensors-interface', 'unimodules-task-manager-interface'])
 end
 
 target 'RNboilerPlate-tvOS' do

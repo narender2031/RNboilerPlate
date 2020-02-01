@@ -1,6 +1,14 @@
 PODS:
   - boost-for-react-native (1.63.0)
   - DoubleConversion (1.1.6)
+  - EXConstants (8.0.0):
+    - UMConstantsInterface
+    - UMCore
+  - EXLocalization (8.0.0):
+    - UMCore
+  - EXPermissions (8.0.0):
+    - UMCore
+    - UMPermissionsInterface
   - FBLazyVector (0.61.5)
   - FBReactNativeSpec (0.61.5):
     - Folly (= 2018.10.22.00)
@@ -182,6 +190,8 @@ PODS:
     - React-cxxreact (= 0.61.5)
     - React-jsi (= 0.61.5)
   - React-jsinspector (0.61.5)
+  - react-native-appearance (0.3.2):
+    - React
   - React-RCTActionSheet (0.61.5):
     - React-Core/RCTActionSheetHeaders (= 0.61.5)
   - React-RCTAnimation (0.61.5):
@@ -219,10 +229,22 @@ PODS:
     - ReactCommon/jscallinvoker (= 0.61.5)
   - RNVectorIcons (6.6.0):
     - React
+  - UMConstantsInterface (5.0.0)
+  - UMCore (5.0.0)
+  - UMFontInterface (5.0.0)
+  - UMImageLoaderInterface (5.0.0)
+  - UMPermissionsInterface (5.0.0)
+  - UMReactNativeAdapter (5.0.0):
+    - React-Core
+    - UMCore
+    - UMFontInterface
   - Yoga (1.14.0)
 
 DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
+  - EXConstants (from `../node_modules/expo-constants/ios`)
+  - EXLocalization (from `../node_modules/expo-localization/ios`)
+  - EXPermissions (from `../node_modules/expo-permissions/ios`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
@@ -238,6 +260,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-appearance (from `../node_modules/react-native-appearance`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
@@ -250,6 +273,12 @@ DEPENDENCIES:
   - ReactCommon/jscallinvoker (from `../node_modules/react-native/ReactCommon`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
+  - UMConstantsInterface (from `../node_modules/unimodules-constants-interface/ios`)
+  - "UMCore (from `../node_modules/@unimodules/core/ios`)"
+  - UMFontInterface (from `../node_modules/unimodules-font-interface/ios`)
+  - UMImageLoaderInterface (from `../node_modules/unimodules-image-loader-interface/ios`)
+  - UMPermissionsInterface (from `../node_modules/unimodules-permissions-interface/ios`)
+  - "UMReactNativeAdapter (from `../node_modules/@unimodules/react-native-adapter/ios`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -259,6 +288,15 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
+  EXConstants:
+    :path: !ruby/object:Pathname
+    path: "../node_modules/expo-constants/ios"
+  EXLocalization:
+    :path: !ruby/object:Pathname
+    path: "../node_modules/expo-localization/ios"
+  EXPermissions:
+    :path: !ruby/object:Pathname
+    path: "../node_modules/expo-permissions/ios"
   FBLazyVector:
     :path: "../node_modules/react-native/Libraries/FBLazyVector"
   FBReactNativeSpec:
@@ -285,6 +323,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-appearance:
+    :path: "../node_modules/react-native-appearance"
   React-RCTActionSheet:
     :path: "../node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -307,12 +347,33 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
+  UMConstantsInterface:
+    :path: !ruby/object:Pathname
+    path: "../node_modules/unimodules-constants-interface/ios"
+  UMCore:
+    :path: !ruby/object:Pathname
+    path: "../node_modules/@unimodules/core/ios"
+  UMFontInterface:
+    :path: !ruby/object:Pathname
+    path: "../node_modules/unimodules-font-interface/ios"
+  UMImageLoaderInterface:
+    :path: !ruby/object:Pathname
+    path: "../node_modules/unimodules-image-loader-interface/ios"
+  UMPermissionsInterface:
+    :path: !ruby/object:Pathname
+    path: "../node_modules/unimodules-permissions-interface/ios"
+  UMReactNativeAdapter:
+    :path: !ruby/object:Pathname
+    path: "../node_modules/@unimodules/react-native-adapter/ios"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
+  EXConstants: 4051b16c17ef3defa03c541d42811dc92b249146
+  EXLocalization: 6a3ec1e9dda2ec9ba9dcc4a29dd840e5e950115e
+  EXPermissions: 9bc08859a675d291e89be9a0870155c27c16ac35
   FBLazyVector: aaeaf388755e4f29cd74acbc9e3b8da6d807c37f
   FBReactNativeSpec: 118d0d177724c2d67f08a59136eb29ef5943ec75
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
@@ -326,6 +387,7 @@ SPEC CHECKSUMS:
   React-jsi: cb2cd74d7ccf4cffb071a46833613edc79cdf8f7
   React-jsiexecutor: d5525f9ed5f782fdbacb64b9b01a43a9323d2386
   React-jsinspector: fa0ecc501688c3c4c34f28834a76302233e29dc0
+  react-native-appearance: c2e0666225d999f7f0e7d9a9cb6c627c6e4c4b92
   React-RCTActionSheet: 600b4d10e3aea0913b5a92256d2719c0cdd26d76
   React-RCTAnimation: 791a87558389c80908ed06cc5dfc5e7920dfa360
   React-RCTBlob: d89293cc0236d9cb0933d85e430b0bbe81ad1d72
@@ -337,8 +399,14 @@ SPEC CHECKSUMS:
   React-RCTVibration: a49a1f42bf8f5acf1c3e297097517c6b3af377ad
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
+  UMConstantsInterface: bda5f8bd3403ad99e663eb3c4da685d063c5653c
+  UMCore: 7ab08669a8bb2e61f557c1fe9784521cb5aa28e3
+  UMFontInterface: 24fbc0a02ade6c60ad3ee3e2b5d597c8dcfc3208
+  UMImageLoaderInterface: 3976a14c588341228881ff75970fbabf122efca4
+  UMPermissionsInterface: 2abf9f7f4aa7110e27beaf634a7deda2d50ff3d7
+  UMReactNativeAdapter: 230406e3335a8dbd4c9c0e654488a1cf3b44552f
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: c35e97c672841403f1450695d13574d765249d7f
+PODFILE CHECKSUM: ea0686a0e56a3154cb6d2a8a70f149dd87725121
 
 COCOAPODS: 1.8.4
